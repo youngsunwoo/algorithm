@@ -8,7 +8,7 @@ public class StackPractice {
 
     //단어뒤집기
     //https://www.acmicpc.net/problem/9093
-    private void reverseWord() {
+    public void reverseWord() {
         String input = "I am happy today\nWe want to win the first prize";
         Stack<Character> stack = new Stack();
 
