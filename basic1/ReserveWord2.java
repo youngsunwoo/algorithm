@@ -1,14 +1,24 @@
 package basic1;
 
+import java.util.Scanner;
 import java.util.Stack;
 
-public class Practice {
+//https://www.acmicpc.net/problem/17413
+public class ReserveWord2 {
 
-    private void printStack(Stack stack){
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        reserveWord2(input);
+        System.out.println();
+    }
+
+    private static void printStack(Stack stack) {
         while (!stack.empty()) System.out.print(stack.pop());
     }
-    //https://www.acmicpc.net/problem/17413
-    public void reserveWord2(String sentence) {
+
+    public static void reserveWord2(String sentence) {
         Stack<Character> stack = new Stack();
         boolean is_tag = false;
 
@@ -33,14 +43,11 @@ public class Practice {
             } else { //tag 안이면 그대로 출력
                 if (c.equals(' ')) {
                     printStack(stack);
+                    System.out.print(c);
                 } else {
                     stack.push(sentence.charAt(i));
                 }
             }
-            }
         }
     }
-
-    public void
-
 }
