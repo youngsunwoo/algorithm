@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 //2×n 타일링
 //https://www.acmicpc.net/problem/11726
+//O
 public class TwoByOneTile {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

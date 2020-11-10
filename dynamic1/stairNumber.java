@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 //쉬운계단수
 //https://www.acmicpc.net/problem/10844
+//O
 public class stairNumber {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -13,11 +14,12 @@ public class stairNumber {
         int[][] arr = new int[101][10];
 
         for(int i=1;i<=9;i++) arr[1][i] = 1;
+
         for(int i=2 ; i<=num ;i++){
             for(int j=0;j<=9;j++){
                 arr[i][j] = 0;
-                if(j-1>=0) arr[i][j] += arr[i-1][j-1];
-                if(j+1<=9) arr[i][j] += arr[i-1][j+1];
+                if(j-1>=0) arr[i][j] += arr[i-1][j-1] %1000000000;
+                if(j+1<=9) arr[i][j] += arr[i-1][j+1] %1000000000;
             }
         }
 
@@ -26,7 +28,7 @@ public class stairNumber {
             result += arr[num][i];
         }
 
-        System.out.println(result);
+        System.out.println(result%1000000000);
     }
 
 }

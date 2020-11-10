@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 //연속합
 //https://www.acmicpc.net/problem/1912
+//△
 public class serialSum {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -28,7 +29,6 @@ public class serialSum {
         }
 
         System.out.println(Collections.max(serialSum));
-
     }
 
 }

@@ -3,19 +3,19 @@ package dynamic1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-//2×n 타일링 2
-//https://www.acmicpc.net/problem/11727
+
+//동물원
+//https://www.acmicpc.net/problem/1309
 //O
-public class TwoByOneTile2 {
+public class Zoo {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
 
-        int[] arr = new int[1001];;
-        arr[0] = 1; arr[1]=1;
+        int[] arr = new int[num+1];;
+        arr[0] = 1; arr[1]=3;
         for(int i=2 ; i<=num;i++){
-            arr[i] = arr[i-1] + arr[i-2] + arr[i-2] ;
-            arr[i] %= 10007;
+            arr[i] = (arr[i-2]+ arr[i-1]*2) % 9901 ;
         }
         System.out.println(arr[num]);
     }

@@ -3,7 +3,9 @@ package dynamic1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
+//1로만들
+//https://www.acmicpc.net/problem/1463
+//O
 public class MakeOne {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
